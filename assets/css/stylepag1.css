@@ -1,3 +1,6 @@
+* {
+  text-align: left;
+}
 header {
     margin-bottom: 70px;
 }
@@ -12,7 +15,7 @@ header {
 .welcome {
     font-size: 4.3em;
     font-weight: 400;
-    margin-bottom: -25px;
+    margin-bottom: -45px;
     
 }
 
