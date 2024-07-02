@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quizz</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/stylepagina2(quiz).css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>quizz</title>
-</head>
-
-<body>
-  <div class="container" id="container">
-    <img src="./assets/img/epicode_logo.png" alt="Logo Epicode" class="logo">
-    <main>
-      <div id="timer"></div>
-      <section id="questionRandom">
-        <div id="questions"></div>
-        <!-- aggiungere le domande con h2 generato dinamicamente con js -->
-        <div id="answers">
-          <input type="radio" name="answer" class="answer" />
-          <input type="radio" name="answer" class="answer" />
-          <input type="radio" name="answer" class="answer" />
-          <input type="radio" name="answer" class="answer" />
+  <body>
+    <img src="./assets/img/epicode_logo.png" alt="Logo Epicode" class="logo" />
+    <div class="container" id="container">
+      <main>
+        <div id="timer"></div>
+        <section id="questionRandom">
+          <div id="questions">
+            <h2><span>ciao a</span> tutti?</h2>
+          </div>
+          <!-- aggiungere le domande con h2 generato dinamicamente con js -->
+          <div id="answers">
+            <p class="answer" id="color">risposte</p>
+            <p class="answer">risposte</p>
+            <br />
+            <p class="answer">risposte</p>
+            <p class="answer">risposte</p>
+          </div>
+        </section>
+        <div id="numberQuestion">
+          <p>
+            QUESTIONS <span id="numeroVariabile"></span
+            ><span id="numeroFisso">/5</span>
+          </p>
         </div>
-      </section>
-      <div id="numberQuestion"></div>
-
-    </main>
-  </div>
-</body>
-
+      </main>
+    </div>
+  </body>
 </html>
