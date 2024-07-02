@@ -1,0 +1,44 @@
+*{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.logo-container{
+    text-align: left;
+}
+
+main>*{
+    display: inline-block;
+    width: 30%;
+}
+
+.final-results-outcome{
+    color: #01ffff;
+}
+
+.final-results-description{
+    font-size: 0.8em;
+}
+
+.results h2{
+    font-size: 2em;
+}
+
+.rateUs,
+.final-results-outcome{
+    font-weight: 600;
+}
+
+.rateUs{
+    text-decoration: none;
+    border:2px solid white;
+    padding: 0.5em 3em;
+}
+
+.container>*:not(:last-child){
+    margin-bottom: 3em;
+}
+
+header h1{
+    font-size: 2.5em;
+}
