@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  width: 80%;
+  height: 90%;
+}
+
+.logo {
+  margin-top: 2em;
+}
+#questions {
+  font-size: xx-large;
+  margin-bottom: 2em;
+}
+span {
+  font-weight: lighter;
+}
+#answers {
+  margin-bottom: 7em;
+}
+.answer {
+  display: inline-block;
+  padding: 1.5em 5em;
+  border: 2px solid transparent;
+  margin: 20px;
+  border-radius: 69px 69px 69px 69px;
+  box-shadow: -1px -1px 2px 2px;
+}
+#color {
+  background: linear-gradient(
+    180deg,
+    rgba(199, 2, 144, 1) 0%,
+    rgba(147, 0, 125, 1) 100%
+  );
+}
+#numeroFisso {
+  color: #b51289;
+}
