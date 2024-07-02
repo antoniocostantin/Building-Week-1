@@ -1,0 +1,95 @@
+header {
+    margin-bottom: 70px;
+}
+
+
+.title {
+    font-size: 4.5em;
+    margin-bottom: 25px;
+
+}
+
+.welcome {
+    font-size: 4.3em;
+    font-weight: 400;
+    margin-bottom: -25px;
+    
+}
+
+article h4{
+    color: #D20094;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+article ul {
+    margin-bottom: 100px;
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+form label {
+    margin-right: 300px;
+    margin-left: 10px;
+   
+}
+
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+
+}
+
+.custom-checkbox input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;  
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 2px solid white
+  }
+
+  .custom-checkbox:hover .checkmark{
+    background-color: rgba(255, 253, 254, 0.25);
+  }
+
+  .custom-checkbox  input:checked ~ .checkmark {
+    background-color: #D20094;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
