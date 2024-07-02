@@ -1,20 +1,18 @@
-.container {
-  text-align: center;
-}
-
-
-
-
 #questions {
   font-size: xx-large;
   margin-bottom: 2em;
 }
-span {
-  font-weight: lighter;
+
+#questions h4 {
+  font-size: 1.5em;
+  font-weight: 300;
 }
+
 #answers {
-  margin-bottom: 7em;
+  width: 75%;
+  margin: 0 auto 7em auto;
 }
+
 .answer {
   display: inline-block;
   padding: 1.5em 5em;
@@ -22,15 +20,16 @@ span {
   margin: 20px;
   border-radius: 69px 69px 69px 69px;
   box-shadow: -1px -1px 2px 2px;
-  background-color:  rgba(255, 253, 254, 0.07);
+  background-color: rgba(255, 253, 254, 0.07);
+  width: 45%;
 }
+
 #color {
-  background: linear-gradient(
-    180deg,
-    rgba(199, 2, 144, 1) 0%,
-    rgba(147, 0, 125, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(199, 2, 144, 1) 0%,
+      rgba(147, 0, 125, 1) 100%);
 }
+
 #numeroFisso {
   color: #b51289;
 }
