@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylepag1.css">
     <title>Build Week 1</title>
 </head>
 
 <body>
 
-    
+
 
     <section class="container">
         <header>
@@ -17,17 +19,17 @@
         </header>
 
         <main>
-            <div class="title">
-                <h2>
+            <div>
+                <h2 class="welcome">
                     Welcome to
                 </h2>
-                <h1>
+                <h1 class="title">
                     your exam
                 </h1>
             </div>
 
             <article>
-                <h4>Instructions</h4>
+                <h4 class="inter">Instructions</h4>
                 <p>
                     We don't expect most engineers to know the answers to all of these questions, so don't worry if
                     you're unsuere of a few of them.
@@ -42,10 +44,14 @@
             </article>
 
             <form>
-                <input type="checkbox" name="promise" id="proceedPromise" required>
-                <label for="proceedPromise">I promise to answer myself without help from anyone</label>
-                
-                <button type="submit">PROCEED</button>
+
+                <label for="proceedPromise" class="custom-checkbox"> 
+                    I promise to answer myself without help from anyone
+                    <input type="checkbox" name="promise" id="proceedPromise" required>
+                    <span class="checkmark"></span>
+                </label>
+
+                <button type="submit" id="btnfeedback">PROCEED</button>
 
             </form>
 
