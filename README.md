@@ -32,7 +32,7 @@ Per configurare questo progetto localmente, segui questi passaggi:
 
 1. Clona il repository:
     ```sh
-    git clone https://github.com/tuo-username/quizzone.git
+    git clone https://github.com/antoniocostantin/Building-Week-1.git
     ```
 
 2. Naviga nella directory del progetto:
