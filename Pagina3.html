@@ -6,45 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Results</title>
     <link rel="icon" href="./assets/img/EPICODE-pitto-color.png">
+    
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pg3.css">
 
 </head>
 
 <body>
     <div class="container" id="container">
         <header>
-            <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" class="logo">
-            <h1>Results</h1>
-            <p>The summary of your answer:</p>
+            <div class="logo-container">
+                <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" class="logo">
+            </div>
+            <h1 class="outfit">Results</h1>
+            <h2 class="outfit thin-font">The summary of your answer:</h2>
         </header>
         <main>
-            <div class="results">
-                <h2>Correct <br> <span>33.3%</span> </h2>
-                <p><span>2</span>/6 questions </p>
+            <div class="results outfit">
+                <h2 class="thin-font">Correct </h2>
+                <h2>33.3%</h2>
+                <p class="extra-thin-font"><span>2</span>/<span>6</span> questions</p>
 
             </div>
 
             <div class="congrats">
                 <div class="final-results">
-                    <p><strong>  Congratulations! </strong> <br>
-                    <strong> You passed the exam. </strong> </p>
+                    <p><strong> Congratulations! </strong></p>
+                    <p class="final-results-outcome"> You passed the exam. </p> 
                     
-                    <p>We'll send you certificate in few minutes.
+                    <p class="final-results-description extra-thin-font">
+                        We'll send you certificate in few minutes.
                         Check your email (including promotion / spam folder)
                     </p>
                 </div>
-
             </div>
 
-            <div class="results">
-                <h2>Wrong <br> <span>66.7%</span> </h2>
-                <p><span>4</span>/6 questions </p>
+            <div class="results outfit">
+                <h2 class="thin-font">Wrong </h2>
+                <h2 >66.7%</h2> 
+                <p class="extra-thin-font"><span>4</span>/<span>6</span> questions </p>
             </div>
-            <button class="=rateUs" type="submit" ><a href="">RATE US</a> </button>
-
-
-
+            
         </main>
+                        
+        <a class="rateUs" href="./Pagina4.html">RATE US</a>
+
     </div>
 <script src="./assets/js/script.js" ></script>
 </body>
