@@ -25,3 +25,17 @@ function AddTitleQuestion(domanda) {
   newh4.innerHTML = a[0];
   newh2.innerHTML = a[1];
 }
+
+const timer= document.querySelector("#timer");
+let seconds=timer.innerText;
+console.log(seconds)
+
+
+
+setInterval (function(){
+  seconds=seconds-1;
+timer.innerHTML= seconds;
+console.log(seconds)
+},1000
+
+)
