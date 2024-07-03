@@ -33,31 +33,31 @@ const timer = document.querySelector("#timer");
 
 
 
-  const countdown = setInterval(function () {
-    let seconds = timer.innerText;
-    seconds = seconds - 1;
-    timer.innerHTML = seconds;
-    // console.log("seconds" ,seconds)
-    // console.log("countdown", countdown)
-    if (seconds === 0) {
-      timer.innerText=10
-      AddTitleQuestion(questions[0].question)
-    }
-  }, 1000
-  )
+const countdown = setInterval(function () {
+  let seconds = timer.innerText;
+  seconds = seconds - 1;
+  timer.innerHTML = seconds;
+  // console.log("seconds" ,seconds)
+  // console.log("countdown", countdown)
+  if (seconds === 0) {
+    timer.innerText = 10
+    AddTitleQuestion(questions[0].question)
+  }
+}, 1000
+)
 
-const randomQuestion= []
-for (let i = 0; i <questions.length; i++){
+const randomQuestion = []
+for (let i = 0; i < questions.length; i++) {
   randomQuestion.push(i)
 
 }
 // console.log(randomQuestion)
-function getRandomIndex(arr){
-let randomNum = RandomNumberGenerator(0,arr.length -1);
-let randomIndex= arr[randomNum];
-console.log(randomIndex)
-
-arr.splice(randomNum, 1);
-console.log(arr)
-return randomIndex
+function getRandomIndex(arr) {
+  let randomNum = RandomNumberGenerator(0, arr.length - 1);
+  let randomIndex = arr[randomNum];
+  console.log(randomIndex)
+  arr.splice(randomNum, 1);
+  console.log(arr)
+  return randomIndex
 }
+console.log(questions[getRandomIndex(randomQuestion)]);
