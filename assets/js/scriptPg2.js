@@ -5,6 +5,7 @@ const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - mi
 // }
 // console.log(questions[3].question.split(" "));
 const timer = document.querySelector("#timer");
+const divanswer = document.getElementById("answers");
 
 window.addEventListener('load', function(){
     ShowNewQuestion();
@@ -55,20 +56,18 @@ function AddTitleQuestion(domanda) {
 function getRandomIndex(arr) {
     let randomNum = RandomNumberGenerator(0, arr.length - 1);
     let randomIndex = arr[randomNum];
-    console.log(randomIndex)
+    // console.log(randomIndex)
     arr.splice(randomNum, 1);
-    console.log(arr)
+    // console.log(arr)
     return randomIndex
 }
 // console.log(questions[getRandomIndex(randomQuestion)]);
 
-function AddAnswer(answerText, deleteAll) {
-    const divanswer = document.getElementById("answers");
-    if*((divanswer.innerHTML = "";
+function AddAnswer(answerText) {
     const h2answer = document.createElement("h2");
     h2answer.classList.add('answer');
     h2answer.innerText = answerText;
-
+    
     divanswer.appendChild(h2answer);
 }
 
@@ -76,9 +75,10 @@ function AddAnswer(answerText, deleteAll) {
 function ShowNewQuestion() {
     const randomIndex = getRandomIndex(indexAvailable);
     const randomQuestion = questions[randomIndex];
-
+    
     AddTitleQuestion(randomQuestion.question);
-
+    
+    divanswer.innerHTML = "";
     AddAnswer(randomQuestion.correct_answer)
 
     for(let i = 0; i < randomQuestion.incorrect_answers.length; i++){
