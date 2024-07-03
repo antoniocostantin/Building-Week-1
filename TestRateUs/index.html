@@ -22,6 +22,7 @@
             transition: color 0.2s;
         }
 
+        
         .rating label:hover,
         .rating label:hover ~ label {
             color: #00FFFF;
@@ -33,7 +34,7 @@
 
         .rating input:checked ~ label ~ label {
             color: #00FFFF;
-        }
+        } 
     </style>
 </head>
 <body>
@@ -72,30 +73,33 @@
     </form>
 
     <script>
-        const stars = document.querySelectorAll('.rating label');  //Seleziono tutti gli elementi label allinterno del div con la classe rating memorizzandoli nella costante stars
-        const inputs = document.querySelectorAll('.rating input'); //Seleziono tutti gli elementi input all'interno del div con la classe rating e li memorizza nella costante inputs
 
-        stars.forEach((star, idx) => {                             //Per ogni elemento label (stella) nella lista stars, esegue la funzione interna. 'star' rappresenta l'elemento corrente e idx è il suo indice nella lista.
-            star.addEventListener('mouseover', () => {             //Aggiungo un event listener all'elemento label corrente che esegue una funzione quando il mouse passa sopra la stella.
-                stars.forEach((s, i) => {                          //Per ogni stella nella lista stars, eseguo la funzione interna. s rappresenta l'elemento stella corrente e i è il suo indice.
+        
+        const stars = document.querySelectorAll('.rating label');      //Seleziono tutti gli elementi label allinterno del div con la classe rating memorizzandoli nella costante stars
+        const inputs = document.querySelectorAll('.rating input');     //Seleziono tutti gli elementi input all'interno del div con la classe rating e li memorizza nella costante inputs
+
+        stars.forEach((star, idx) => {                                   //Per ogni elemento label (stella) nella lista stars, esegue la funzione interna. Star rappresenta l'elemento corrente e idx è il suo indice nella lista.
+            star.addEventListener('mouseover', () => {                   //Aggiungo un event listener all'elemento label corrente che esegue una funzione quando il mouse passa sopra la stella.
+                stars.forEach((s, i) => {                                //Per ogni stella nella lista stars, eseguo la funzione interna. s rappresenta l'elemento stella corrente e i è il suo indice.
                     s.style.color = i <= idx ? '#00FFFF' : '#0B113B';    //Imposto il colore della stella corrente a #00FFFF se l'indice i è minore o uguale all'indice della stella su cui si è passati con il mouse (idx). Altrimenti, imposta il colore a #0B113B.
                 });
             });
-            star.addEventListener('mouseout', () => {                                 //Imposto il colore della stella corrente a #00FFFF se l'indice i è minore o uguale all'indice della stella su cui si è passati con il mouse (idx). Altrimenti, imposta il colore a #0B113B.
-                const checkedInput = document.querySelector('.rating input:checked'); //Seleziono l'elemento input che è attualmente selezionato (quello che è stato cliccato) e lo memorizza nella costante checkedInput.
-                const checkedIndex = checkedInput ? checkedInput.value - 1 : -1;      //Calcolo l'indice della stella selezionata. Se c'è un input selezionato, usa il suo valore meno 1 (poiché gli indici degli array partono da 0). Se non c'è nessun input selezionato, usa -1.
-                stars.forEach((s, i) => {                                             //Per ogni stella nella lista stars, eseguo la funzione interna.
+            star.addEventListener('mouseout', () => {                                       //Imposto il colore della stella corrente a #00FFFF se l'indice i è minore o uguale all'indice della stella su cui si è passati con il mouse (idx). Altrimenti, imposta il colore a #0B113B.
+                const checkedInput = document.querySelector('.rating input:checked');       //Seleziono l'elemento input che è attualmente selezionato (quello che è stato cliccato) e lo memorizza nella costante checkedInput.
+                const checkedIndex = checkedInput ? checkedInput.value - 1 : -1;            //Calcolo l'indice della stella selezionata. Se c'è un input selezionato, usa il suo valore meno 1 (poiché gli indici degli array partono da 0). Se non c'è nessun input selezionato, usa -1.
+                stars.forEach((s, i) => {                                                   //Per ogni stella nella lista stars, eseguo la funzione interna.
                     s.style.color = i <= checkedIndex ? '#00FFFF' : '#0B113B';              //Imposto il colore della stella corrente a #00FFFF se l'indice i è minore o uguale all'indice della stella selezionata (checkedIndex). Altrimenti, imposta il colore a #0B113B.
                 });
             });
-            star.addEventListener('click', () => {               //Aggiunge un event listener all'elemento label corrente che esegue una funzione quando si clicca sulla stella.
-                inputs[idx].checked = true;                      // Imposta l'input corrispondente alla stella cliccata come selezionato (checked).
-                stars.forEach((s, i) => {                        //Per ogni stella nella lista stars, esegue la funzione interna.
+            star.addEventListener('click', () => {                     //Aggiunge un event listener all'elemento label corrente che esegue una funzione quando si clicca sulla stella.
+                inputs[idx].checked = true;                            //Imposta l'input corrispondente alla stella cliccata come selezionato (checked).
+                stars.forEach((s, i) => {                              //Per ogni stella nella lista stars, esegue la funzione interna.
                     s.style.color = i <= idx ? '#00FFFF' : '#0B113B';  //Imposta il colore della stella corrente a #00FFFF se l'indice i è minore o uguale all'indice della stella cliccata (idx). Altrimenti, imposta il colore a #0B113B.
                 });
                 
             });
         });
+        
     </script>
 </body>
 </html>
