@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating con Stelline - Baolo Edition</title>
+    <style>
+
+        body{
+            background-color: black;
+        }
+
+
+        .ratings {
+            display: block;
+            margin: 0 auto;
+            direction: rtl; /*Il segreto è questo! con questa regola si rovescia l'ordine di visualizzazione a destra verso sinistra (quindi la prima stella che incontriamo sarà l'ultima!) */
+            width: fit-content;
+        }
+
+        .ratings input {
+            display: none;
+        }
+
+        .ratings label {
+            font-size: 2rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        label:hover,
+        label:hover ~ label {
+            transition: color 0.3s ease;
+            color: #00FFFF;
+        }
+
+        input:checked,
+        input:checked ~ label{
+            color: #00FFFF;
+        }
+
+        button{
+            display: block;
+            margin: 5em auto;
+            padding: 1em 3em;
+            background-color: #00FFFF;
+            border: none;
+            -webkit-box-shadow: 0px 0px 15px 11px #c2ffff; 
+            box-shadow: 0px 0px 15px 11px #c2ffff;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="ratings">
+            <input type="radio" id="star1" name="rating" value="10" required/>
+            <label for="star1" title="10 stella">★</label>
+            <input type="radio" id="star2" name="rating" value="9" />
+            <label for="star2" title="9 stelle">★</label>
+            <input type="radio" id="star3" name="rating" value="8" />
+            <label for="star3" title="8 stelle">★</label>
+            <input type="radio" id="star4" name="rating" value="7" />
+            <label for="star4" title="7 stelle">★</label>
+            <input type="radio" id="star5" name="rating" value="6" />
+            <label for="star5" title="6 stelle">★</label>
+            <input type="radio" id="star6" name="rating" value="5" />
+            <label for="star6" title="5 stelle">★</label>
+            <input type="radio" id="star7" name="rating" value="4" />
+            <label for="star7" title="4 stelle">★</label>
+            <input type="radio" id="star8" name="rating" value="3" />
+            <label for="star8" title="3 stelle">★</label>
+            <input type="radio" id="star9" name="rating" value="2" />
+            <label for="star9" title="2 stelle">★</label>
+            <input type="radio" id="star10" name="rating" value="1" />
+            <label for="star10" title="1 stelle">★</label>
+        </div>
+
+        <button type="submit">test Baolifico</button>
+
+    </form>
+
+</body>
+
+</html>
