@@ -61,3 +61,12 @@ function getRandomIndex(arr) {
   return randomIndex
 }
 console.log(questions[getRandomIndex(randomQuestion)]);
+
+
+
+const divanswer = document.getElementById("answers");
+const h2answer = document.createElement("h2");
+
+h2answer.innerText = "vattelapesca";
+
+divanswer.appendChild(h2answer);
