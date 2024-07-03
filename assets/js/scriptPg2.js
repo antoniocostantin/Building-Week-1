@@ -78,6 +78,16 @@ function ShowNewQuestion() {
     
     AddTitleQuestion(randomQuestion.question);
     
+    // // array unificato con tutte le risposte
+    // const a = ['risposta1','risposta2','risposta3','risposta4']
+    
+    // // while(lunghezza a > 0)
+    
+    // // prendiamo un item random dell'array
+    // let b = getRandomIndex(a);
+    
+    // AddAnwser(b);
+
     divanswer.innerHTML = "";
     AddAnswer(randomQuestion.correct_answer)
 
