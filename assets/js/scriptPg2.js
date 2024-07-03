@@ -32,10 +32,13 @@ console.log(seconds)
 
 
 
-setInterval (function(){
+const countdown= setInterval (function(){
   seconds=seconds-1;
 timer.innerHTML= seconds;
-console.log(seconds)
+// console.log("seconds" ,seconds)
+console.log("countdown" ,countdown)
+if (seconds === 0){
+  clearInterval(countdown)
+}
 },1000
-
 )
