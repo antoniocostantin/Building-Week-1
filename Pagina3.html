@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Results</title>
     <link rel="icon" href="./assets/img/EPICODE-pitto-color.png">
-    
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/stylepag3.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
 
 </head>
 
@@ -31,29 +33,27 @@
 
             <div class="congrats">
                 <div class="final-results">
-                    <p class="bold-font" id="pippu">Congratulations!</p>
-                    <p class="final-results-outcome"> You passed the exam. </p> 
-                    
-                    <p class="final-results-description extra-thin-font">
-                        We'll send you certificate in few minutes.
-                        Check your email (including promotion / spam folder)
-                    </p>
+                    <div class="graph-container"></div>
                 </div>
             </div>
 
             <div class="results outfit">
                 <h2 class="thin-font">Wrong </h2>
-                <h2 id="percentwrong">66.7%</h2> 
+                <h2 id="percentwrong">66.7%</h2>
                 <p class="extra-thin-font"><span id="nwrong">4</span>/<span class="totquestions">6</span> questions </p>
             </div>
-            
+
         </main>
-                        
+
         <a class="rateUs" href="./Pagina4.html">RATE US</a>
 
     </div>
-<script src="./assets/js/script.js" ></script>
-<script src="./assets/js/scriptPG3.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scriptPG3.js"></script>
+    <script src="./assets/js/scriptGraphPg3.js"></script>
+
+
 </body>
 
 </html>
