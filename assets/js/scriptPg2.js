@@ -17,7 +17,7 @@ const countdown = setInterval(function () {
     seconds = seconds - 1;
     timer.innerHTML = seconds;
     if (seconds === 0) {
-        timer.innerText = 1;
+        timer.innerText = 10;
         Getanswerselected();
         Changepage();
         ShowNewQuestion();
