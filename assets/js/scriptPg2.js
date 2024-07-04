@@ -1,7 +1,9 @@
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
-let num = 2;
+const duration = 3; // Durata del timer in secondi
+let seconds = duration;
+let num = 1;
 let correctansw = 0;
 let incorrectansw = 0;
 let correctanswer;
@@ -13,16 +15,16 @@ window.addEventListener('load', function () {
 });
 
 const countdown = setInterval(function () {
-    let seconds = timer.innerText;
-    seconds = seconds - 1;
-    timer.innerHTML = seconds;
+    seconds--;
     if (seconds === 0) {
-        timer.innerText = 1;
+        num++;
         Getanswerselected();
         Changepage();
+        
         ShowNewQuestion();
         Checkquestion(num);
-        num++;
+        seconds = duration;
+        startTime = Date.now();
     }
 }, 1000
 )
@@ -83,7 +85,7 @@ function ShowNewQuestion() {
 
     divanswer.innerHTML = "";
     const arrayrisposte = [];
-    console.log(randomQuestion)
+    // console.log(randomQuestion)
     for (let i = 0; i < randomQuestion.incorrect_answers.length; i++) {
         arrayrisposte.push(randomQuestion.incorrect_answers[i]);
     }
@@ -113,7 +115,7 @@ function init() {
         indexAvailable.push(i)
     }
 
-    Checkquestion(1);
+    Checkquestion(num);
     ShowNewQuestion();
 }
 
@@ -141,5 +143,5 @@ function Checkresult(el){
     } else {
         incorrectansw++;
     }
-    console.log(incorrectansw, correctansw)
+    console.log('incorrectansw', incorrectansw, 'correctansw', correctansw)
 }
