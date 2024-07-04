@@ -8,17 +8,19 @@ const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 
 window.addEventListener('load', function () {
-    ShowNewQuestion();
+    init();
 });
-
+let num = 2;
 const countdown = setInterval(function () {
     let seconds = timer.innerText;
     seconds = seconds - 1;
     timer.innerHTML = seconds;
     if (seconds === 0) {
-        timer.innerText = 10
+        timer.innerText = 1;
         AddTitleQuestion(questions[0].question)
         ShowNewQuestion();
+        Checkquestion(num);
+        num++;
     }
 }, 1000
 )
@@ -67,7 +69,13 @@ function AddAnswer(answerText) {
     const h2answer = document.createElement("h2");
     h2answer.classList.add('answer');
     h2answer.innerText = answerText;
-
+    h2answer.addEventListener('click', function(){
+        const colorclasslist = document.querySelectorAll(".color");
+        colorclasslist.forEach(element => {
+            element.classList.remove("color");
+        });
+        this.classList.add("color");
+    })
     divanswer.appendChild(h2answer);
 }
 
@@ -103,14 +111,14 @@ function ShowNewQuestion() {
     }
 }
 
+function Checkquestion(n){
+    const numquestion = document.getElementById("numeroVariabile");
+    numquestion.innerText = n;
+}
 
-
-
-
-/* funzione per selezionare le domande
-
-si assegna un addeventlistener agli elementi con classe risposta (click, selectansw());
-
-selectansw = function(){
-    
-}*/
+function init(){
+    Checkquestion(1);
+    ShowNewQuestion();
+    const questionlenght = document.getElementById("numeroFisso");
+    questionlenght.innerText = `/${questions.length}`;
+}
