@@ -7,7 +7,7 @@ const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - mi
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     ShowNewQuestion();
 });
 
@@ -67,7 +67,7 @@ function AddAnswer(answerText) {
     const h2answer = document.createElement("h2");
     h2answer.classList.add('answer');
     h2answer.innerText = answerText;
-    
+
     divanswer.appendChild(h2answer);
 }
 
@@ -75,23 +75,42 @@ function AddAnswer(answerText) {
 function ShowNewQuestion() {
     const randomIndex = getRandomIndex(indexAvailable);
     const randomQuestion = questions[randomIndex];
-    
+
     AddTitleQuestion(randomQuestion.question);
-    
+
     // // array unificato con tutte le risposte
     // const a = ['risposta1','risposta2','risposta3','risposta4']
-    
+
     // // while(lunghezza a > 0)
-    
+
     // // prendiamo un item random dell'array
     // let b = getRandomIndex(a);
-    
+
     // AddAnwser(b);
 
     divanswer.innerHTML = "";
-    AddAnswer(randomQuestion.correct_answer)
+    const arrayrisposte = [];
+    console.log(randomQuestion)
+    for (let i = 0; i < randomQuestion.incorrect_answers.length; i++) {
+        arrayrisposte.push(randomQuestion.incorrect_answers[i]);
+    }
+    arrayrisposte.push(randomQuestion.correct_answer);
 
-    for(let i = 0; i < randomQuestion.incorrect_answers.length; i++){
-        AddAnswer(randomQuestion.incorrect_answers[i])
+    const lengthanswer = arrayrisposte.length;
+    for (let i = 0; i < lengthanswer; i++) {
+        const answer = getRandomIndex(arrayrisposte);
+        AddAnswer(answer);
     }
 }
+
+
+
+
+
+/* funzione per selezionare le domande
+
+si assegna un addeventlistener agli elementi con classe risposta (click, selectansw());
+
+selectansw = function(){
+    
+}*/
