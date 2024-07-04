@@ -120,8 +120,10 @@ function Changepage() {
     }
 }
 
-function Getanswerselected(){
+function Getanswerselected() {
     const selanswer = document.querySelector(".color");
-    const answer = selanswer.innerText;
-    console.log(answer);
+    if (selanswer != null) {
+        const answer = selanswer.innerText;
+        console.log(answer);
+    }
 }
