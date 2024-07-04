@@ -63,3 +63,7 @@ html {
 .extra-thin-font{
     font-weight: 100;
 }
+
+.bold-font{
+    font-weight: 600;
+}

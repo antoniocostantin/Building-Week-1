@@ -118,8 +118,9 @@ function init() {
 }
 
 function Changepage() {
+    localStorage.setItem("pippe", questions.length)
     localStorage.setItem("pippo", correctansw);
-    localStorage.setItem("pippo2", incorrectansw);
+    localStorage.setItem("pippa", incorrectansw);
     if (indexAvailable.length === 0) {
         document.location.href = "Pagina3.html";
     }
