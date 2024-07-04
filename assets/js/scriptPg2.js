@@ -1,7 +1,7 @@
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
-const duration = 3; // Durata del timer in secondi
+const duration = 50; // Durata del timer in secondi
 let seconds = duration;
 let num = 1;
 let correctansw = 0;

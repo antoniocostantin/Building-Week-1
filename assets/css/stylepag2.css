@@ -1,7 +1,24 @@
 #questions {
-  font-size: xx-large;
-  margin-bottom: 2em;
+  font-size: large;
+  margin-bottom: 3.5em;
+  margin-top: 7em;
 }
+
+#questionRandom {
+  max-width: 600px; /* Imposta una larghezza massima per il contenuto della sezione */
+  margin: 0 auto;  /* Centra la sezione orizzontalmente */
+  padding: 1em;    /* Aggiunge un po' di spazio interno alla sezione */
+  
+  border-radius: 10px; /* Aggiunge angoli arrotondati */
+}
+
+#timer {
+  position: absolute;
+  top: 4em;
+  right: 2.5em;
+ 
+}
+
 
 #questions h4 {
   font-size: 1.5em;
@@ -9,20 +26,27 @@
 }
 
 #answers {
-  width: 75%;
-  margin: 0 auto 7em auto;
+  
+  width: 100%; /* Assicura che il div occupi tutta la larghezza disponibile */
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 2em; /* Aggiunge uno spazio tra gli elementi */
+ 
+  margin-bottom: 1em; /* Riduce il margine inferiore */
+  margin-top: 5em;
 }
 
 .answer {
-  display: inline-block;
-  padding: 1.5em 5em;
+  flex: 1 1 calc(50% - 1em); /* Le risposte occupano metà della larghezza meno lo spazio del gap */
+  padding: 1em; /* Aggiunge spazio interno alle risposte */
   border: 2px solid transparent;
-  margin: 20px;
   border-radius: 69px 69px 69px 69px;
-  box-shadow: -1px -1px 2px 2px;
   background-color: rgba(255, 253, 254, 0.07);
-  width: 45%;
+
+
   cursor: pointer;
+  box-shadow: 0 -1px 5px rgb(245, 245, 245); /* Aggiunge una leggera ombra per ogni risposta */
+  text-align: center; /* Centra il testo all'interno delle risposte */
 }
 
 .color {
