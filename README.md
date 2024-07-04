@@ -40,14 +40,19 @@ Per configurare questo progetto localmente, segui questi passaggi:
     cd quizzone
     ```
 
-3. Apri `index.html` nel tuo browser preferito per iniziare.
+3. Utilizzare il comando `npm i d3` da terminale;
+
+
+4. Apri `index.html` nel tuo browser preferito per iniziare.
+
 
 ## Utilizzo
 
 1. Apri `index.html` per visualizzare la pagina di benvenuto e le regole del quiz.
-2. Vai alla pagina del quiz e rispondi alle domande entro il tempo stabilito.
-3. Dopo aver completato il quiz, visualizza i risultati nella pagina dei risultati.
-4. Lascia una valutazione del corso nella pagina di feedback.
+2. Spunta la casella e clicca il tasto `proced` per accedere alla pagina del quiz.
+3. Seleziona la risposta giusta entro il tempo stabilito.
+4. Dopo aver completato il quiz, i risultati verrano automaticamente visualizzati nella pagina.
+5. Clicca su `rate us` ascia una valutazione del corso nella pagina di feedback.
 
 ## Descrizione delle Pagine
 
@@ -55,8 +60,6 @@ Per configurare questo progetto localmente, segui questi passaggi:
 2. **Quiz**: Pagina del quiz con domande a scelta multipla e un timer animato.
 3. **Risultati**: Pagina dei risultati con un grafico delle performance creato con D3.js.
 4. **Feedback**: Pagina per lasciare una valutazione e un commento sul corso.
-
-* Se si vuole utilizzare questa applicazione bisogna prima eseguire la funzione npm i d3 da terminale.
 
 ## Contributi
 
