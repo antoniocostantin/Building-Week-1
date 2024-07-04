@@ -2,8 +2,9 @@ const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
 let num = 2;
-const correctansw = [];
-const incorrectansw = [];
+let correctansw = 0;
+let incorrectansw = 0;
+let correctanswer;
 
 const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -17,8 +18,8 @@ const countdown = setInterval(function () {
     timer.innerHTML = seconds;
     if (seconds === 0) {
         timer.innerText = 1;
-        Changepage();
         Getanswerselected();
+        Changepage();
         ShowNewQuestion();
         Checkquestion(num);
         num++;
@@ -77,7 +78,7 @@ function AddAnswer(answerText) {
 function ShowNewQuestion() {
     const randomIndex = getRandomIndex(indexAvailable);
     const randomQuestion = questions[randomIndex];
-
+    correctanswer = randomQuestion.correct_answer;
     AddTitleQuestion(randomQuestion.question);
 
     divanswer.innerHTML = "";
@@ -101,6 +102,8 @@ function Checkquestion(n) {
 }
 
 function init() {
+    // puliamo il local storage
+    localStorage.clear();
     // init numero massimo di domande
     const questionlenght = document.getElementById("numeroFisso");
     questionlenght.innerText = `/${questions.length}`;
@@ -115,15 +118,27 @@ function init() {
 }
 
 function Changepage() {
+    localStorage.setItem("pippo", correctansw);
+    localStorage.setItem("pippo2", incorrectansw);
     if (indexAvailable.length === 0) {
         document.location.href = "Pagina3.html";
     }
 }
 
 function Getanswerselected() {
+    let answer; 
     const selanswer = document.querySelector(".color");
     if (selanswer != null) {
-        const answer = selanswer.innerText;
-        console.log(answer);
+         answer = selanswer.innerText;
+    } 
+    Checkresult(answer)
+}
+
+function Checkresult(el){
+    if(el === correctanswer){
+        correctansw++;
+    } else {
+        incorrectansw++;
     }
+    console.log(incorrectansw, correctansw)
 }
