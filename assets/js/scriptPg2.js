@@ -1,37 +1,29 @@
-const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-// for (let index = 0; index < questions.length; index++) {
-//   const element = questions[index];
-//   console.log(element);
-// }
-// console.log(questions[3].question.split(" "));
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
+const indexAvailable = []
+let num = 2;
+
+const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 window.addEventListener('load', function () {
     init();
 });
-let num = 2;
+
 const countdown = setInterval(function () {
-    let seconds = timer.innerText;
-    seconds = seconds - 1;
-    timer.innerHTML = seconds;
-    if (seconds === 0) {
-        timer.innerText = 1;
-        AddTitleQuestion(questions[0].question)
-        ShowNewQuestion();
-        Checkquestion(num);
-        num++;
-    }
-}, 1000
+        let seconds = timer.innerText;
+        seconds = seconds - 1;
+        timer.innerHTML = seconds;
+        if (seconds === 0) {
+            timer.innerText = 1;
+            AddTitleQuestion(questions[0].question)
+            ShowNewQuestion();
+            Checkquestion(num);
+            num++;
+        }
+    }, 1000
 )
 
-const indexAvailable = []
-for (let i = 0; i < questions.length; i++) {
-    indexAvailable.push(i)
-}
-
 function SplitQuestions(domanda) {
-    //   let domanda = questions[3].question;
     let splitQuestion = domanda.split(" ");
     //   console.log(splitQuestion);
     let primaMeta = Math.floor(splitQuestion.length / 2);
@@ -44,6 +36,7 @@ function SplitQuestions(domanda) {
     //   console.log(joinStringa2);
     return [joinStringa1, joinStringa2];
 }
+
 // console.log(splitQuestions("come mi chiamo?"));
 function AddTitleQuestion(domanda) {
     const newh4 = document.querySelector("#questions h4");
@@ -52,7 +45,6 @@ function AddTitleQuestion(domanda) {
     newh4.innerHTML = a[0];
     newh2.innerHTML = a[1];
 }
-
 
 // console.log(randomQuestion)
 function getRandomIndex(arr) {
@@ -79,22 +71,11 @@ function AddAnswer(answerText) {
     divanswer.appendChild(h2answer);
 }
 
-
 function ShowNewQuestion() {
     const randomIndex = getRandomIndex(indexAvailable);
     const randomQuestion = questions[randomIndex];
 
     AddTitleQuestion(randomQuestion.question);
-
-    // // array unificato con tutte le risposte
-    // const a = ['risposta1','risposta2','risposta3','risposta4']
-
-    // // while(lunghezza a > 0)
-
-    // // prendiamo un item random dell'array
-    // let b = getRandomIndex(a);
-
-    // AddAnwser(b);
 
     divanswer.innerHTML = "";
     const arrayrisposte = [];
@@ -119,6 +100,13 @@ function Checkquestion(n){
 function init(){
     Checkquestion(1);
     ShowNewQuestion();
+
+    // init numero massimo di domande
     const questionlenght = document.getElementById("numeroFisso");
     questionlenght.innerText = `/${questions.length}`;
+
+    // init array degli indici disponibili
+    for (let i = 0; i < questions.length; i++) {
+        indexAvailable.push(i)
+    }
 }
