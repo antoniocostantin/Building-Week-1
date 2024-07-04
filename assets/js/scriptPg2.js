@@ -2,6 +2,8 @@ const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
 let num = 2;
+const correctansw = [];
+const incorrectansw = [];
 
 const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -10,17 +12,18 @@ window.addEventListener('load', function () {
 });
 
 const countdown = setInterval(function () {
-        let seconds = timer.innerText;
-        seconds = seconds - 1;
-        timer.innerHTML = seconds;
-        if (seconds === 0) {
-            timer.innerText = 1;
-            AddTitleQuestion(questions[0].question)
-            ShowNewQuestion();
-            Checkquestion(num);
-            num++;
-        }
-    }, 1000
+    let seconds = timer.innerText;
+    seconds = seconds - 1;
+    timer.innerHTML = seconds;
+    if (seconds === 0) {
+        timer.innerText = 1;
+        Changepage();
+        Getanswerselected();
+        ShowNewQuestion();
+        Checkquestion(num);
+        num++;
+    }
+}, 1000
 )
 
 function SplitQuestions(domanda) {
@@ -61,7 +64,7 @@ function AddAnswer(answerText) {
     const h2answer = document.createElement("h2");
     h2answer.classList.add('answer');
     h2answer.innerText = answerText;
-    h2answer.addEventListener('click', function(){
+    h2answer.addEventListener('click', function () {
         const colorclasslist = document.querySelectorAll(".color");
         colorclasslist.forEach(element => {
             element.classList.remove("color");
@@ -92,15 +95,12 @@ function ShowNewQuestion() {
     }
 }
 
-function Checkquestion(n){
+function Checkquestion(n) {
     const numquestion = document.getElementById("numeroVariabile");
     numquestion.innerText = n;
 }
 
-function init(){
-    Checkquestion(1);
-    ShowNewQuestion();
-
+function init() {
     // init numero massimo di domande
     const questionlenght = document.getElementById("numeroFisso");
     questionlenght.innerText = `/${questions.length}`;
@@ -109,4 +109,19 @@ function init(){
     for (let i = 0; i < questions.length; i++) {
         indexAvailable.push(i)
     }
+
+    Checkquestion(1);
+    ShowNewQuestion();
+}
+
+function Changepage() {
+    if (indexAvailable.length === 0) {
+        document.location.href = "Pagina3.html";
+    }
+}
+
+function Getanswerselected(){
+    const selanswer = document.querySelector(".color");
+    const answer = selanswer.innerText;
+    console.log(answer);
 }
