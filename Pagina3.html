@@ -24,14 +24,14 @@
         <main>
             <div class="results outfit">
                 <h2 class="thin-font">Correct </h2>
-                <h2>33.3%</h2>
-                <p class="extra-thin-font"><span>2</span>/<span>6</span> questions</p>
+                <h2 id="percentdone">33.3%</h2>
+                <p class="extra-thin-font"><span id="ndone">2</span>/<span class="totquestions">6</span> questions</p>
 
             </div>
 
             <div class="congrats">
                 <div class="final-results">
-                    <p><strong> Congratulations! </strong></p>
+                    <p class="bold-font" id="pippu">Congratulations!</p>
                     <p class="final-results-outcome"> You passed the exam. </p> 
                     
                     <p class="final-results-description extra-thin-font">
@@ -43,8 +43,8 @@
 
             <div class="results outfit">
                 <h2 class="thin-font">Wrong </h2>
-                <h2 >66.7%</h2> 
-                <p class="extra-thin-font"><span>4</span>/<span>6</span> questions </p>
+                <h2 id="percentwrong">66.7%</h2> 
+                <p class="extra-thin-font"><span id="nwrong">4</span>/<span class="totquestions">6</span> questions </p>
             </div>
             
         </main>
@@ -53,6 +53,7 @@
 
     </div>
 <script src="./assets/js/script.js" ></script>
+<script src="./assets/js/scriptPG3.js"></script>
 </body>
 
 </html>
