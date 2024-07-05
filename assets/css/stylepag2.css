@@ -92,3 +92,7 @@ text {
   fill: white;
   text-anchor: middle;
 }
+
+#timer{
+  text-align: end;
+}
