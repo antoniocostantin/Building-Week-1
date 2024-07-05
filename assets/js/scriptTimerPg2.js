@@ -61,3 +61,4 @@
      updateProgress(elapsed);
      if (elapsed === duration) return true;
  });
+

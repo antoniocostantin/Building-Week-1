@@ -5,11 +5,11 @@
 }
 
 #questionRandom {
-  max-width: 600px; /* Imposta una larghezza massima per il contenuto della sezione */
-  margin: 0 auto;  /* Centra la sezione orizzontalmente */
-  padding: 1em;    /* Aggiunge un po' di spazio interno alla sezione */
+ /* max-width: 600px;*/ 
+  margin: 0 auto;  
+  padding: 1em;    
   
-  border-radius: 10px; /* Aggiunge angoli arrotondati */
+  border-radius: 10px; 
 }
 
 #timer {
@@ -41,12 +41,20 @@
   padding: 1em; /* Aggiunge spazio interno alle risposte */
   border: 2px solid transparent;
   border-radius: 69px 69px 69px 69px;
+  
   background-color: rgba(255, 253, 254, 0.07);
 
 
   cursor: pointer;
-  box-shadow: 0 -1px 5px rgb(245, 245, 245); /* Aggiunge una leggera ombra per ogni risposta */
+  box-shadow: 0 -1px 5px rgb(245, 245, 245); 
   text-align: center; /* Centra il testo all'interno delle risposte */
+}
+
+.answer:hover {
+  background: linear-gradient(180deg,
+  rgba(199, 2, 144, 1) 0%,
+  rgba(147, 0, 125, 1) 100%);
+
 }
 
 .color {

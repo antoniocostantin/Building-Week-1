@@ -1,12 +1,15 @@
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
-const duration = 50; // Durata del timer in secondi
+const duration = 5; // Durata del timer in secondi
 let seconds = duration;
 let num = 1;
 let correctansw = 0;
 let incorrectansw = 0;
 let correctanswer;
+
+//MODIFICHE DI MARCO
+const answers = document.querySelectorAll('.answer');
 
 const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -20,7 +23,7 @@ const countdown = setInterval(function () {
         num++;
         Getanswerselected();
         Changepage();
-        
+
         ShowNewQuestion();
         Checkquestion(num);
         seconds = duration;
@@ -129,19 +132,40 @@ function Changepage() {
 }
 
 function Getanswerselected() {
-    let answer; 
+    let answer;
     const selanswer = document.querySelector(".color");
     if (selanswer != null) {
-         answer = selanswer.innerText;
-    } 
+        answer = selanswer.innerText;
+    }
     Checkresult(answer)
 }
 
-function Checkresult(el){
-    if(el === correctanswer){
+function Checkresult(el) {
+    if (el === correctanswer) {
         correctansw++;
     } else {
         incorrectansw++;
     }
     console.log('incorrectansw', incorrectansw, 'correctansw', correctansw)
 }
+
+//MODIFICHE DI MARCO
+
+
+
+answers.forEach(answer => {
+    answer.addEventListener('click', function () {
+        answer.forEach(ans => {
+            ans.classList.remove('selected');
+            ans.classList.remove('deselected');
+            const selectedAnswer = this.innerText;
+            Checkresult(selectedAnswer);
+
+        }
+
+        )
+    }
+    )
+}
+
+)
