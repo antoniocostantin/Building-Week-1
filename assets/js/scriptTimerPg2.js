@@ -1,9 +1,8 @@
  // Impostazioni
- const width = 200;
- const height = 200;
+ const width = 140;
+ const height = 140;
  const radius = Math.min(width, height) / 2 - 10;
- const duration = 10; // Durata del timer in secondi
- const arcThickness = 10; // Spessore dell'arco
+ const arcThickness = 7; // Spessore dell'arco
 
  // Creare l'elemento SVG
  const svg = d3.select("#timer")
@@ -33,13 +32,13 @@
 
  // Testo al centro del cerchio
  const timeText = svg.append("text")
-     .attr("dy", "-1.9em")
-     .attr("font-size", "15px")
+     .attr("dy", "-2.4em")
+     .attr("font-size", "10px")
      .text("SECONDS");
 
  const remainingText = svg.append("text")
-     .attr("dy", "2.8em")
-     .attr("font-size", "15px")
+     .attr("dy", "3.2em")
+     .attr("font-size", "10px")
      .text("REMAINING");
 
  const secondsText = svg.append("text")
@@ -62,3 +61,4 @@
      updateProgress(elapsed);
      if (elapsed === duration) return true;
  });
+
