@@ -2,6 +2,13 @@
     font-size: 1.2rem;
 }
 
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
 main>*{
     display: inline-block;
     width: 30%;
@@ -28,7 +35,13 @@ main>*{
     text-decoration: none;
     border:2px solid white;
     padding: 0.5em 3em;
+    cursor: pointer;
 }
+
+
+.rateUs:hover {
+    background:  rgba(255, 253, 254, 0.25);
+  }
 
 .container>*:not(:last-child){
     margin-bottom: 3em;
@@ -41,4 +54,13 @@ header h1{
 .graph-center-text{
     text-anchor: middle;
     dominant-baseline: middle;
+}
+
+.congrats {
+	flex-grow: 2;
+}
+
+.graph-container,
+.graph-container svg {
+	max-height: 30em;
 }

@@ -8,6 +8,15 @@
   font-weight: 300;
 }
 
+#innerAnswer {
+  font-size: 2.5em;
+  margin-top: -12px;
+}
+
+#answers>*{
+  line-height: 1.2em;
+}
+
 #answers {
   width: 75%;
   margin: 0 auto 7em auto;

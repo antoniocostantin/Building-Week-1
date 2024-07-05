@@ -13,8 +13,10 @@ console.log(arcs);
 
 const svg = d3.select(".graph-container")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    // .attr("width", width)
+    // .attr("height", height)
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
     .append("g")
     .attr("transform", `translate(${width / 2}, ${height / 2})`)
     ;

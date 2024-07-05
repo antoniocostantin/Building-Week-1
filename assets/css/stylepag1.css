@@ -60,7 +60,8 @@ form label {
   height: 25px;
   width: 25px;
   background-color: transparent;
-  border: 2px solid white
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 .custom-checkbox:hover .checkmark {
