@@ -8,6 +8,7 @@ Questo repository contiene l'implementazione del progetto "Quizzone", il test se
 - [Installazione](#installazione)
 - [Utilizzo](#utilizzo)
 - [Descrizione delle Pagine](#descrizione-delle-pagine)
+- [Features interessanti](#Features-interessanti)
 - [Contributi](#contributi)
 - [Licenza](#licenza)
 
@@ -25,6 +26,7 @@ Il "Quizzone" è il nostro progetto di ricreare la pagina di benchmark, dedicata
 - **CSS**: Stile delle pagine web.
 - **JavaScript**: Interattività e funzionalità.
 - **D3.js**: Libreria utilizzata per creare il grafico dei risultati e animare il timer.
+- **html2pdf.js**: Libreria utilizzata stampare il certificato del quiz
 
 ## Installazione
 
@@ -40,7 +42,7 @@ Per configurare questo progetto localmente, segui questi passaggi:
     cd quizzone
     ```
 
-3. Utilizzare il comando `npm i d3` da terminale;
+3. Utilizzare il comando `npm i` da terminale per implementare i pacchetti del progetto;
 
 
 4. Apri `index.html` nel tuo browser preferito per iniziare.
@@ -52,7 +54,8 @@ Per configurare questo progetto localmente, segui questi passaggi:
 2. Spunta la casella e clicca il tasto `proced` per accedere alla pagina del quiz.
 3. Seleziona la risposta giusta entro il tempo stabilito.
 4. Dopo aver completato il quiz, i risultati verrano automaticamente visualizzati nella pagina.
-5. Clicca su `rate us` ascia una valutazione del corso nella pagina di feedback.
+5. Clicca su `rate us` lascia una valutazione del corso nella pagina di feedback.
+6. Se possibile puoi premere su `Print Certificate` per stampare il tuo certificato
 
 ## Descrizione delle Pagine
 
@@ -60,6 +63,32 @@ Per configurare questo progetto localmente, segui questi passaggi:
 2. **Quiz**: Pagina del quiz con domande a scelta multipla e un timer animato.
 3. **Risultati**: Pagina dei risultati con un grafico delle performance creato con D3.js.
 4. **Feedback**: Pagina per lasciare una valutazione e un commento sul corso.
+
+## Features interessanti
+
+Per l'ottimizzazione della selezione casuale delle domande si è scelto un algoritmo particolare:
+Viene utilizzato un array che contiene tutti gli indici disponibili `indexAvailable` che in prima battuta conterrà tutti gli indici dell'array delle domande che verrà fornito.
+Per la selezione casuale della domanda viene utilizzta la funzione `ShowNewQuestion` la quale sceglierà un l'indice casuale della domanda da visualizzare tramite `getRandomIndex`.
+`getRandomIndex` genera un valore causale da 0 all'ultimo indice del array fornito e lo utilizza come indice per estrarne il dato (in questo caso uno degli indici disponibili) e successivamente per rimuoverlo dall'array che lo conteneva.
+
+Questo algoritmo apporta una eccellente ottimizzazione in caso di pochi indici rimasti in quanto non si cicla la generazione del numero casuale ma bensì si fa la scelta casuale dei soli indici disponibili.
+
+`function ShowNewQuestion() {
+    const randomIndex = getRandomIndex(indexAvailable);
+    const randomQuestion = questions[randomIndex];
+    ...
+}`
+
+`
+function getRandomIndex(arr) {
+    let randomNum = RandomNumberGenerator(0, arr.length - 1);
+    let randomIndex = arr[randomNum];
+    arr.splice(randomNum, 1);
+    return randomIndex
+}
+`
+
+
 
 ## Contributi
 
