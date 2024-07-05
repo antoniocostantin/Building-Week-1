@@ -15,7 +15,7 @@ body {
 .border-pattern {
   border: 5px solid #02ffff;
   margin: 2em;
-  background-image: url(../assets/img/bg.jpg);
+  background-image: url('../img/bg.jpg');
   position: center;
   background-size: cover;
   background-repeat: no-repeat;

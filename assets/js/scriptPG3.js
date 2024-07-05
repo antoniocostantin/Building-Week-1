@@ -24,9 +24,13 @@ pippi.forEach(pi => {
 const congrat = document.getElementById("pippu");
 const finalresult = document.querySelector(".final-results-outcome");
 const finaldescription = document.querySelector(".final-results-description");
+const printButton = document.querySelector('#btnfeedback')
 
-// if(((pippo / 10)*100).toFixed(1) < 60 ){
-//     congrat.innerText = "test failed";
-//     finalresult.innerText = "u're coglione";
-//     finaldescription.innerText = "we'll send u a coglione's certificate asap ";
-// }
+if(((pippo / pippe)*100).toFixed(1) < 60 ){
+    printButton.style.display = "block";
+    printButton.style.margin = "2em auto";
+
+    printButton.addEventListener('click', function(){
+        window.location.replace("certificato.html");
+    })
+}
