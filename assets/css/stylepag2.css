@@ -40,7 +40,11 @@ main {
 
 #innerAnswer {
   font-size: 2.5em;
-  margin-top: -25px;
+  margin-top: -12px;
+}
+
+#answers>*{
+  line-height: 1.2em;
 }
 
 #answers {
@@ -91,4 +95,8 @@ svg {
 text {
   fill: white;
   text-anchor: middle;
+}
+
+#timer{
+  text-align: end;
 }

@@ -43,7 +43,7 @@
 
  const secondsText = svg.append("text")
      .attr("dy", "0.35em")
-     .attr("font-size", "50px");
+     .attr("font-size", "3em");
 
  // Funzione per l'animazione
  function updateProgress(elapsed) {
