@@ -10,6 +10,12 @@
   padding: 1em;    
   
   border-radius: 10px; 
+  margin-bottom: 5em;
+}
+main {
+  min-height: 80vh;
+  padding-bottom: 3em;
+ 
 }
 
 #timer {
@@ -17,6 +23,13 @@
   top: 4em;
   right: 2.5em;
  
+}
+
+#numberquestion {
+
+  display: flex;
+  margin-top: 2em;
+
 }
 
 
@@ -27,12 +40,12 @@
 
 #answers {
   
-  width: 100%; /* Assicura che il div occupi tutta la larghezza disponibile */
+  width: 100%; 
   display: flex; 
   flex-wrap: wrap; 
   gap: 2em; /* Aggiunge uno spazio tra gli elementi */
  
-  margin-bottom: 1em; /* Riduce il margine inferiore */
+  margin-bottom: 1em; 
   margin-top: 5em;
 }
 
@@ -47,17 +60,16 @@
 
   cursor: pointer;
   box-shadow: 0 -1px 5px rgb(245, 245, 245); 
-  text-align: center; /* Centra il testo all'interno delle risposte */
+  text-align: center; 
 }
 
 .answer:hover {
-  background: linear-gradient(180deg,
-  rgba(199, 2, 144, 1) 0%,
-  rgba(147, 0, 125, 1) 100%);
+  background:  rgba(255, 253, 254, 0.25);
 
 }
 
-.color {
+.color,
+.color:hover {
   background: linear-gradient(180deg,
       rgba(199, 2, 144, 1) 0%,
       rgba(147, 0, 125, 1) 100%);
