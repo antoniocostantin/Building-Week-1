@@ -5,7 +5,7 @@ const width = 450,
 // Calcola il raggio del grafico a torta
 const radius = Math.min(width, height) / 2 - margin;
 
-const data = [parseInt(pippo), parseInt(pippa)];
+const data = [pippo, pippa];
 const pie = d3.pie();
 const arcs = pie(data)
 
@@ -44,14 +44,14 @@ const textHeigth = parseInt(pippo) > parseInt(pippa) ? -10 : 10;
 
 
 textGroup.append("text")
-    .text(parseInt(pippo) > parseInt(pippa) ? "Congratulations!" : "Test failed!")
+    .text((pippo) > (pippa) ? "Congratulations!" : "Test failed!")
     .attr("class", "graph-center-text bold-font")
     .attr("x", 0)
     .attr("y", textHeigth - 40)
     .style("fill", "white");
 
 textGroup.append("text")
-    .text(parseInt(pippo) > parseInt(pippa) ? "You passed the exam" : "U're a coglione")
+    .text((pippo) > (pippa) ? "You passed the exam" : "U're a coglione")
     .attr("class", "graph-center-text bold-font")
     .attr("x", 0)
     .attr("y", textHeigth - 15)

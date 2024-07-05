@@ -1,5 +1,5 @@
 @page {
-  size: A4 landscape;
+  size: A3 landscape;
 }
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
 .border-pattern {
   border: 5px solid #02ffff;
   margin: 2em;
-  background-image: url(../assets/img/bg.jpg);
+  background-image: url('../img/bg.jpg');
   position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,8 +68,16 @@ button {
   font-size: 1.2em;
   box-shadow: 2px 2px 10px 2px #02ffff;
 }
-img {
+.epic {
   display: block;
   width: 20em;
   margin: 0 auto;
+}
+.badge {
+  width: 15em;
+}
+.badgeContainer {
+  position: absolute;
+  top: 60%;
+  left: 150px;
 }

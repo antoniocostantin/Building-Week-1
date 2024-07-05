@@ -8,3 +8,9 @@ function downloadFunction() {
   };
   html2pdf().from(element).set(options).save();
 }
+
+
+function back(){
+  window.location.replace("pagina3.html");
+
+}
