@@ -1,4 +1,4 @@
-#feedback{
+#feedback {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #c2138e;
@@ -10,36 +10,38 @@
     font-weight: 300;
 }
 
-.stars{
+.stars {
     margin: 5px;
 }
 
-.pform{
+.pform {
     margin: 20px;
+    font-size: 1.3em;
 }
 
-.container header{
+.container header {
     margin-bottom: 5em;
 }
 
-.content-container>*{
+.content-container>* {
     margin-bottom: 4em;
 }
 
-.content-container{
+.content-container {
     width: 70%;
     margin: 0 auto;
 }
 
 .content-container h1 {
-	font-size: 3em;
-	margin-bottom: 0.5em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
 .ratings {
     display: block;
     margin: 0 auto;
-    direction: rtl; /*Il segreto è questo! con questa regola si rovescia l'ordine di visualizzazione a destra verso sinistra (quindi la prima stella che incontriamo sarà l'ultima!) */
+    direction: rtl;
+    /*Il segreto è questo! con questa regola si rovescia l'ordine di visualizzazione a destra verso sinistra (quindi la prima stella che incontriamo sarà l'ultima!) */
     width: fit-content;
 }
 
@@ -48,20 +50,20 @@
 }
 
 .ratings label {
-	font-size: 3.5rem;
-	color: #d2d2d2;
-	cursor: pointer;
-	transition: color 0.2s;
-	margin: 0 5px;
+    font-size: 3.5rem;
+    color: #d2d2d2;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 5px;
 }
 
 label:hover,
-label:hover ~ label {
+label:hover~label {
     transition: color 0.3s ease;
     color: #00FFFF;
 }
 
 input:checked,
-input:checked ~ label{
+input:checked~label {
     color: #00FFFF;
 }

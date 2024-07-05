@@ -1,6 +1,6 @@
 # Progetto Settimanale Quizzone - Build Week 1
 
-Questo repository contiene l'implementazione del progetto "Quizzone", un compito settimanale del corso Epicode. L'obiettivo è replicare la piattaforma quiz utilizzata nei nostri esami settimanali, creando un sito web completamente funzionale con quattro pagine distinte.
+Questo repository contiene l'implementazione del progetto "Quizzone", il test settimanale del corso Epicode. L'obiettivo è replicare la pagina benchmark che la piattaforma di Epicode utilizzata nei nostri test teorici settimanali, creando un sito web completamente funzionale con quattro pagine distinte.
 
 ## Indice
 - [Panoramica del Progetto](#panoramica-del-progetto)
@@ -13,11 +13,11 @@ Questo repository contiene l'implementazione del progetto "Quizzone", un compito
 
 ## Panoramica del Progetto
 
-Il progetto "Quizzone" è una piattaforma quiz basata sul web che include:
+Il "Quizzone" è il nostro progetto di ricreare la pagina di benchmark, dedicata all'informatica, della piattaforma EPICODE include:
 1. Una pagina di benvenuto con un paragrafo che spiega le regole del quiz.
-2. La pagina del quiz dove gli utenti devono selezionare la risposta corretta entro un timer.
+2. La pagina del quiz dove gli utenti devono selezionare la risposta corretta entro un tempo prestabilito.
 3. Una pagina dei risultati che mostra la performance dell'utente con un grafico.
-4. Una pagina di feedback dove gli utenti possono lasciare una valutazione per il corso.
+4. Una pagina di feedback dove gli utenti possono lasciare una valutazione e una recesnione del corso.
 
 ## Tecnologie Utilizzate
 
@@ -40,14 +40,19 @@ Per configurare questo progetto localmente, segui questi passaggi:
     cd quizzone
     ```
 
-3. Apri `index.html` nel tuo browser preferito per iniziare.
+3. Utilizzare il comando `npm i d3` da terminale;
+
+
+4. Apri `index.html` nel tuo browser preferito per iniziare.
+
 
 ## Utilizzo
 
 1. Apri `index.html` per visualizzare la pagina di benvenuto e le regole del quiz.
-2. Vai alla pagina del quiz e rispondi alle domande entro il tempo stabilito.
-3. Dopo aver completato il quiz, visualizza i risultati nella pagina dei risultati.
-4. Lascia una valutazione del corso nella pagina di feedback.
+2. Spunta la casella e clicca il tasto `proced` per accedere alla pagina del quiz.
+3. Seleziona la risposta giusta entro il tempo stabilito.
+4. Dopo aver completato il quiz, i risultati verrano automaticamente visualizzati nella pagina.
+5. Clicca su `rate us` ascia una valutazione del corso nella pagina di feedback.
 
 ## Descrizione delle Pagine
 

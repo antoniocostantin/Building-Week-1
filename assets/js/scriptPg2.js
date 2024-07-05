@@ -1,10 +1,15 @@
 const timer = document.querySelector("#timer");
 const divanswer = document.getElementById("answers");
 const indexAvailable = []
-let num = 2;
+const duration = 5; // Durata del timer in secondi
+let seconds = duration;
+let num = 1;
 let correctansw = 0;
 let incorrectansw = 0;
 let correctanswer;
+
+//MODIFICHE DI MARCO
+const answers = document.querySelectorAll('.answer');
 
 const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -13,16 +18,16 @@ window.addEventListener('load', function () {
 });
 
 const countdown = setInterval(function () {
-    let seconds = timer.innerText;
-    seconds = seconds - 1;
-    timer.innerHTML = seconds;
+    seconds--;
     if (seconds === 0) {
-        timer.innerText = 1;
+        num++;
         Getanswerselected();
         Changepage();
+
         ShowNewQuestion();
         Checkquestion(num);
-        num++;
+        seconds = duration;
+        startTime = Date.now();
     }
 }, 1000
 )
@@ -83,7 +88,7 @@ function ShowNewQuestion() {
 
     divanswer.innerHTML = "";
     const arrayrisposte = [];
-    console.log(randomQuestion)
+    // console.log(randomQuestion)
     for (let i = 0; i < randomQuestion.incorrect_answers.length; i++) {
         arrayrisposte.push(randomQuestion.incorrect_answers[i]);
     }
@@ -113,7 +118,7 @@ function init() {
         indexAvailable.push(i)
     }
 
-    Checkquestion(1);
+    Checkquestion(num);
     ShowNewQuestion();
 }
 
@@ -127,19 +132,40 @@ function Changepage() {
 }
 
 function Getanswerselected() {
-    let answer; 
+    let answer;
     const selanswer = document.querySelector(".color");
     if (selanswer != null) {
-         answer = selanswer.innerText;
-    } 
+        answer = selanswer.innerText;
+    }
     Checkresult(answer)
 }
 
-function Checkresult(el){
-    if(el === correctanswer){
+function Checkresult(el) {
+    if (el === correctanswer) {
         correctansw++;
     } else {
         incorrectansw++;
     }
-    console.log(incorrectansw, correctansw)
+    console.log('incorrectansw', incorrectansw, 'correctansw', correctansw)
 }
+
+//MODIFICHE DI MARCO
+
+
+
+answers.forEach(answer => {
+    answer.addEventListener('click', function () {
+        answer.forEach(ans => {
+            ans.classList.remove('selected');
+            ans.classList.remove('deselected');
+            const selectedAnswer = this.innerText;
+            Checkresult(selectedAnswer);
+
+        }
+
+        )
+    }
+    )
+}
+
+)

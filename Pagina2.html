@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Answer</title>
   <link rel="icon" href="./assets/img/EPICODE-pitto-color.png" type="icon">
+
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/stylepag2.css" />
+  
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
 </head>
 
@@ -20,14 +23,14 @@
 
     <main>
 
-      <div id="timer">10</div>
+      <div id="timer"></div>
 
       <section id="questionRandom">
         <div id="questions">
           <h4>
               How can I create a
           </h4>
-          <h2>
+          <h2 id="innerAnswer" >
             checkbox in HTML?
           </h2>
         </div>
@@ -51,6 +54,8 @@
 </body>
 
 <script src="./assets/js/db.js"></script>
+<script src="./assets/js/scriptTimerPg2.js" ></script>
 <script src="./assets/js/scriptPg2.js"></script>
+
 
 </html>
