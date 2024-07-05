@@ -25,8 +25,8 @@ const congrat = document.getElementById("pippu");
 const finalresult = document.querySelector(".final-results-outcome");
 const finaldescription = document.querySelector(".final-results-description");
 
-if(((pippo / 10)*100).toFixed(1) < 60 ){
-    congrat.innerText = "test failed";
-    finalresult.innerText = "u're coglione";
-    finaldescription.innerText = "we'll send u a coglione's certificate asap ";
-}
+// if(((pippo / 10)*100).toFixed(1) < 60 ){
+//     congrat.innerText = "test failed";
+//     finalresult.innerText = "u're coglione";
+//     finaldescription.innerText = "we'll send u a coglione's certificate asap ";
+// }
