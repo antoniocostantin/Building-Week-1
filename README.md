@@ -73,20 +73,22 @@ Per la selezione casuale della domanda viene utilizzta la funzione `ShowNewQuest
 
 Questo algoritmo apporta una eccellente ottimizzazione in caso di pochi indici rimasti in quanto non si cicla la generazione del numero casuale ma bensì si fa la scelta casuale dei soli indici disponibili.
 
-`function ShowNewQuestion() {
+```javascript
+function ShowNewQuestion() {
     const randomIndex = getRandomIndex(indexAvailable);
     const randomQuestion = questions[randomIndex];
     ...
-}`
+}
+```
 
-`
+```javascript
 function getRandomIndex(arr) {
     let randomNum = RandomNumberGenerator(0, arr.length - 1);
     let randomIndex = arr[randomNum];
     arr.splice(randomNum, 1);
     return randomIndex
 }
-`
+```
 
 
 
