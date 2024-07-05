@@ -47,7 +47,7 @@
 
  // Funzione per l'animazione
  function updateProgress(elapsed) {
-     const endAngle = (elapsed / duration) * 2 * Math.PI;
+     const endAngle = - (elapsed / duration) * 2 * Math.PI;
      progress.datum({ endAngle: endAngle })
          .attr("d", arc);
      secondsText.text(`${Math.ceil(duration - elapsed)}`);
