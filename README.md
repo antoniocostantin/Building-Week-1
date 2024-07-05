@@ -67,7 +67,7 @@ Per configurare questo progetto localmente, segui questi passaggi:
 ## Features interessanti
 
 Per l'ottimizzazione della selezione casuale delle domande si è scelto un algoritmo particolare:
-Viene utilizzato un array che contiene tutti gli indici disponibili `indexAvailable` che in prima battuta conterrà tutti gli indici dell'array delle domande che verrà fornito.
+Viene utilizzato un array che contiene tutti gli indici disponibili `indexAvailable` che in prima battuta conterrà tutti gli indici dell'array delle domande che verrà fornito, nelle successive avrà un numero sempre minore di indici a cui l'algoritmo potrà attingere.
 Per la selezione casuale della domanda viene utilizzta la funzione `ShowNewQuestion` la quale sceglierà un l'indice casuale della domanda da visualizzare tramite `getRandomIndex`.
 `getRandomIndex` genera un valore causale da 0 all'ultimo indice del array fornito e lo utilizza come indice per estrarne il dato (in questo caso uno degli indici disponibili) e successivamente per rimuoverlo dall'array che lo conteneva.
 
