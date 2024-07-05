@@ -7,8 +7,10 @@ window.addEventListener('load', function () {
         event.preventDefault();
         const selectedStar = document.querySelector('input[name="rating"]:checked');
         alert(`
-        Valutazione: ${selectedStar.value} stelle ${selectedStar.value == 5 ? 'san montana' : ''} \n 
-        Commento: ${feedbackInput.value}    
-    `)
+            Valutazione: ${selectedStar.value} stelle ${selectedStar.value == 5 ? 'san montana' : ''} \n 
+            Commento: ${feedbackInput.value}    
+        `);
+        
+        window.location.replace("index.html");
     });
 });
