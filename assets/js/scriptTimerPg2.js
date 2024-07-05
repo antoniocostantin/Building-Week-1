@@ -1,6 +1,6 @@
  // Impostazioni
- const width = 150;
- const height = 150;
+ const width = 140;
+ const height = 140;
  const radius = Math.min(width, height) / 2 - 10;
  const arcThickness = 7; // Spessore dell'arco
 
@@ -32,13 +32,13 @@
 
  // Testo al centro del cerchio
  const timeText = svg.append("text")
-     .attr("dy", "-1.9em")
-     .attr("font-size", "0.8em")
+     .attr("dy", "-2.4em")
+     .attr("font-size", "10px")
      .text("SECONDS");
 
  const remainingText = svg.append("text")
-     .attr("dy", "2.8em")
-     .attr("font-size", "0.8em")
+     .attr("dy", "3.2em")
+     .attr("font-size", "10px")
      .text("REMAINING");
 
  const secondsText = svg.append("text")
@@ -61,3 +61,4 @@
      updateProgress(elapsed);
      if (elapsed === duration) return true;
  });
+

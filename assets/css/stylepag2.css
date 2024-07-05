@@ -1,10 +1,40 @@
 #questions {
-  font-size: xx-large;
-  margin-bottom: 2em;
+  font-size: large;
+  margin-bottom: 3.5em;
+  margin-top: 7em;
 }
 
+#questionRandom {
+ /* max-width: 600px;*/ 
+  margin: 0 auto;  
+  padding: 1em;    
+  
+  border-radius: 10px; 
+  margin-bottom: 5em;
+}
+main {
+  min-height: 80vh;
+  padding-bottom: 3em;
+ 
+}
+
+#timer {
+  position: absolute;
+  top: 4em;
+  right: 2.5em;
+ 
+}
+
+#numberquestion {
+
+  display: flex;
+  margin-top: 2em;
+
+}
+
+
 #questions h4 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 300;
 }
 
@@ -18,23 +48,37 @@
 }
 
 #answers {
-  width: 75%;
-  margin: 0 auto 7em auto;
+  
+  width: 100%; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 2em; /* Aggiunge uno spazio tra gli elementi */
+ 
+  margin-bottom: 1em; 
+  margin-top: 5em;
 }
 
 .answer {
-  display: inline-block;
-  padding: 1.5em 5em;
+  flex: 1 1 calc(50% - 1em); /* Le risposte occupano metà della larghezza meno lo spazio del gap */
+  padding: 1em; /* Aggiunge spazio interno alle risposte */
   border: 2px solid transparent;
-  margin: 20px;
   border-radius: 69px 69px 69px 69px;
-  box-shadow: -1px -1px 2px 2px;
+  
   background-color: rgba(255, 253, 254, 0.07);
-  width: 45%;
+
+
   cursor: pointer;
+  box-shadow: 0 -1px 5px rgb(245, 245, 245); 
+  text-align: center; 
 }
 
-.color {
+.answer:hover {
+  background:  rgba(255, 253, 254, 0.25);
+
+}
+
+.color,
+.color:hover {
   background: linear-gradient(180deg,
       rgba(199, 2, 144, 1) 0%,
       rgba(147, 0, 125, 1) 100%);
