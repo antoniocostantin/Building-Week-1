@@ -34,8 +34,13 @@ main {
 
 
 #questions h4 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 300;
+}
+
+#innerAnswer {
+  font-size: 2.5em;
+  margin-top: -25px;
 }
 
 #answers {
